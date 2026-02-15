@@ -4,45 +4,6 @@
 
 AI Health Copilot is a cloud-based healthcare platform that leverages artificial intelligence to solve critical challenges in Indian healthcare. The system consists of web and mobile applications for doctors and patients, backed by intelligent AI services that automate clinical workflows, improve patient safety, and enhance healthcare delivery.
 
-## Architecture Overview
-
-### High-Level Architecture
-
-
-┌─────────────────────────────────────────────────────────────┐
-│                     Client Layer                            │
-│  ┌──────────────────┐         ┌──────────────────┐          │
-│  │   Web App        │         │   Mobile App     │          │
-│  │   (React)        │         │   (Flutter)      │          │
-│  └──────────────────┘         └──────────────────┘          │
-└─────────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│                     API Gateway Layer                       │
-│              (Load Balancer + Authentication)               │
-└─────────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│                  Application Layer (Node.js + Express)      │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
-│  │ Clinical     │  │ Patient      │  │ Analytics    │       │
-│  │ Services     │  │ Services     │  │ Services     │       │
-│  └──────────────┘  └──────────────┘  └──────────────┘       │
-└─────────────────────────────────────────────────────────────┘
-                            │
-                ┌───────────┴───────────┐
-                ▼                       ▼
-┌──────────────────────────┐  ┌──────────────────────────┐
-│   AI Services Layer      │  │   Data Layer             │
-│  ┌────────────────────┐  │  │  ┌────────────────────┐  │
-│  │ OpenAI GPT-4       │  │  │  │ MongoDB            │  │
-│  │ Google Cloud AI    │  │  │  │ Redis Cache        │  │
-│  │ Custom ML Models   │  │  │  │ AWS S3             │  │
-│  └────────────────────┘  │  │  └────────────────────┘  │
-└──────────────────────────┘  └──────────────────────────┘
-
 
 ## Solution Design by Feature
 
